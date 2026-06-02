@@ -244,7 +244,7 @@ function makeConnect4Game(randomValues = []) {
     columns,
     newGame,
     ...loadBrowserScript(
-      "connect-4.js",
+      "connect-4/connect-4.js",
       { status, board, columns, "new-game": newGame },
       randomValues
     ),

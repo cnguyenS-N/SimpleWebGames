@@ -1,6 +1,6 @@
 # SimpleWebGames
 
-A small collection of browser-based games built with plain HTML, CSS, and JavaScript. Each game runs directly in the browser without a build step or application server.
+A small collection of browser-based games built with plain HTML, CSS, and JavaScript. Open the landing page to choose a game, then play directly in the browser without a build step or application server.
 
 ## Games
 
