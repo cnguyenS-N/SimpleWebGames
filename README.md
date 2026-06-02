@@ -7,7 +7,7 @@ A small collection of browser-based games built with plain HTML, CSS, and JavaSc
 - **Tic-Tac-Toe** (`tic-tac-toe.html`, `game.html`, `game.js`, `tic-tac-toe.css`)
   - Classic 3x3 Tic-Tac-Toe against a computer opponent.
   - The computer looks for winning moves, blocks most immediate threats, and otherwise favors strategic positions.
-- **Air Hockey** (`air-hockey.html`, `air-hockey.js`, `air-hockey.css`)
+- **Air Hockey** (`air-hockey.html`, `air-hockey.js`, `air-hockey/air-hockey.css`)
   - Canvas-based air hockey match against a computer-controlled mallet.
   - Drag your mallet with the mouse; the first player to 2 goals wins.
 - **Connect 4** (`connect-4.html`, `connect-4.js`, `connect-4.css`)
@@ -50,7 +50,9 @@ npx serve .
 |-- tic-tac-toe.css     # Tic-Tac-Toe styles
 |-- air-hockey.html     # Air Hockey play screen
 |-- air-hockey.js       # Air Hockey canvas game loop and AI
-|-- air-hockey.css      # Air Hockey styles
+|-- air-hockey/
+|   |-- README.md       # Air Hockey implementation notes
+|   `-- air-hockey.css  # Air Hockey styles
 |-- connect-4.html      # Connect 4 play screen
 |-- connect-4.js        # Connect 4 board logic and computer moves
 |-- connect-4.css       # Connect 4 styles
@@ -61,6 +63,6 @@ npx serve .
 
 ## Development notes
 
-- Each game is self-contained in its own HTML/CSS/JS files.
+- Each game is self-contained in its own HTML/CSS/JS files, with Air Hockey styles kept under `air-hockey/`.
 - Shared navigation returns to `index.html` via the "All games" link.
 - No build step or package manager setup is required for normal development.
