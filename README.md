@@ -39,6 +39,16 @@ or
 npx serve .
 ```
 
+## Testing
+
+The repository includes a Node.js test suite for the game logic. Run it from the repository root:
+
+```sh
+npm test
+```
+
+The tests use `node:test` with lightweight DOM shims to exercise Tic-Tac-Toe, Connect 4, and Memory Match behavior without a browser.
+
 ## Project structure
 
 ```text
@@ -56,7 +66,10 @@ npx serve .
 |-- connect-4.css       # Connect 4 styles
 |-- memory-match.html   # Memory Match play screen
 |-- memory-match.js     # Memory Match deck, matching, and reset logic
-`-- memory-match.css    # Memory Match card flip styles
+|-- memory-match.css    # Memory Match card flip styles
+|-- package.json        # npm script for the Node test suite
+`-- test/
+    `-- games.test.js   # Game logic tests with fake browser elements
 ```
 
 ## Development notes
@@ -64,3 +77,4 @@ npx serve .
 - Each game is self-contained in its own HTML/CSS/JS files.
 - Shared navigation returns to `index.html` via the "All games" link.
 - No build step or package manager setup is required for normal development.
+- Use `npm test` after changing shared game behavior or browser-game logic.
