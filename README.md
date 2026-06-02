@@ -15,7 +15,7 @@ A small collection of browser-based games built with plain HTML, CSS, and JavaSc
   - Drop red discs by choosing a column while the computer plays green discs.
   - Detects horizontal, vertical, and diagonal wins, highlights the winning line, and supports ties and quick restarts.
 - **Memory Match** (`memory-match.html`, `memory-match.js`, `memory-match.css`)
-  - 12-card matching game with 6 pairs of illustrated cards.
+  - 12-card matching game with 6 pairs of inline SVG illustrated cards in a 4-column grid.
   - Flip two cards at a time, match all pairs, and track the number of moves needed to win.
   - Supports quick restarts, accessible card labels, and a short flip-back delay for missed matches.
 
