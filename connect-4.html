@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connect 4 — Play</title>
+  <link rel="stylesheet" href="connect-4.css">
+</head>
+<body>
+  <main class="game">
+    <h1>Connect 4</h1>
+    <p id="status" class="status">Your turn — drop a red disc</p>
+    <div class="columns" id="columns" role="toolbar" aria-label="Choose a column">
+      <button type="button" class="col-btn" data-col="0" aria-label="Column 1">1</button>
+      <button type="button" class="col-btn" data-col="1" aria-label="Column 2">2</button>
+      <button type="button" class="col-btn" data-col="2" aria-label="Column 3">3</button>
+      <button type="button" class="col-btn" data-col="3" aria-label="Column 4">4</button>
+      <button type="button" class="col-btn" data-col="4" aria-label="Column 5">5</button>
+      <button type="button" class="col-btn" data-col="5" aria-label="Column 6">6</button>
+      <button type="button" class="col-btn" data-col="6" aria-label="Column 7">7</button>
+    </div>
+    <div id="board" class="board" role="grid" aria-label="Connect 4 board"></div>
+    <button id="new-game" class="new-game" type="button">New Game</button>
+    <a href="index.html" class="back-link">All games</a>
+  </main>
+  <script src="connect-4.js"></script>
+</body>
+</html>
