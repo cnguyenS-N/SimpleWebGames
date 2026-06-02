@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Games</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f0f2f5;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    main {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+      padding: 2.5rem 2rem;
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+    }
+    h1 { font-size: 1.75rem; margin-bottom: 0.5rem; color: #1a1a2e; }
+    p { color: #555; margin-bottom: 2rem; line-height: 1.5; }
+    .game-links { display: flex; flex-direction: column; gap: 0.75rem; }
+    a {
+      display: block;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      color: #fff;
+      transition: background 0.15s;
+    }
+    .ttt { background: #2563eb; }
+    .ttt:hover { background: #1d4ed8; }
+    .hockey { background: #0ea5e9; }
+    .hockey:hover { background: #0284c7; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Browser Games</h1>
+    <p>Pick a game to play against the computer.</p>
+    <div class="game-links">
+      <a href="tic-tac-toe.html" class="ttt">Tic-Tac-Toe</a>
+      <a href="air-hockey.html" class="hockey">Air Hockey</a>
+    </div>
+  </main>
+</body>
+</html>
