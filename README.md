@@ -39,11 +39,28 @@ or
 npx serve .
 ```
 
+## Testing
+
+The repository includes a Node.js test suite built on the native `node:test` runner. The tests load the browser game scripts in a lightweight VM-backed fake DOM to verify core game behavior without a browser.
+
+Run all tests from the repository root:
+
+```sh
+npm test
+```
+
+Current coverage includes:
+
+- Tic-Tac-Toe winner, tie, empty-cell, computer-move, and player-win behavior.
+- Connect 4 board helpers, win detection, winning-cell highlighting, and computer-move behavior.
+- Memory Match deck creation, shuffling, accessible card rendering, board locking, mismatch handling, pair matching, and final win status.
+
 ## Project structure
 
 ```text
 .
 |-- index.html          # Game picker landing page
+|-- package.json        # Node.js test script
 |-- tic-tac-toe.html    # Tic-Tac-Toe landing page
 |-- game.html           # Tic-Tac-Toe play screen
 |-- game.js             # Tic-Tac-Toe game logic
@@ -56,11 +73,14 @@ npx serve .
 |-- connect-4.css       # Connect 4 styles
 |-- memory-match.html   # Memory Match play screen
 |-- memory-match.js     # Memory Match deck, matching, and reset logic
-`-- memory-match.css    # Memory Match card flip styles
+|-- memory-match.css    # Memory Match card flip styles
+`-- test/
+    `-- games.test.js   # Automated tests for browser game logic
 ```
 
 ## Development notes
 
 - Each game is self-contained in its own HTML/CSS/JS files.
 - Shared navigation returns to `index.html` via the "All games" link.
-- No build step or package manager setup is required for normal development.
+- No build step is required to play or develop the static site.
+- Automated tests use only Node.js built-in modules and can be run with `npm test`.
