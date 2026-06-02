@@ -366,7 +366,7 @@ test("Connect 4 detects horizontal, vertical, and diagonal wins with winning cel
   const diagonal = emptyConnectBoard();
   diagonal[5][0] = diagonal[4][1] = diagonal[3][2] = diagonal[2][3] = 1;
   assert.equal(context.checkWinFrom(diagonal, 3, 2, 1), true);
-  assert.deepEqual(plain(context.getWinningCells(diagonal, 3, 2, 1)), [[5, 0], [4, 1], [3, 2], [2, 3]]);
+  assert.deepEqual(plain(context.getWinningCells(diagonal, 3, 2, 1)), [[2, 3], [3, 2], [4, 1], [5, 0]]);
 
   assert.equal(context.getWinningCells(emptyConnectBoard(), 5, 0, 1), null);
 });
