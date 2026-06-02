@@ -201,6 +201,10 @@ function runInGame(context, code) {
   return vm.runInContext(code, context);
 }
 
+function plain(value) {
+  return JSON.parse(JSON.stringify(value));
+}
+
 function makeTicTacToeGame(randomValues = []) {
   const status = new FakeElement("p");
   const board = new FakeElement("div");
@@ -284,7 +288,7 @@ test("Tic-Tac-Toe detects winners, ties, empty cells, and winning moves", () => 
 
   assert.equal(context.isTie(["X", "O", "X", "O", "X", "O", "O", "X", "O"]), true);
   assert.equal(context.isTie(["X", null, "O", null, null, null, null, null, null]), false);
-  assert.deepEqual(context.getEmptyCells(["X", null, "O", null, null, "X", "O", null, null]), [1, 3, 4, 7, 8]);
+  assert.deepEqual(plain(context.getEmptyCells(["X", null, "O", null, null, "X", "O", null, null])), [1, 3, 4, 7, 8]);
 
   assert.equal(context.findWinningMove(["O", "O", null, "X", null, null, null, null, "X"], "O"), 2);
   assert.equal(context.findWinningMove(["X", null, "O", null, "X", null, null, null, null], "X"), 8);
@@ -338,7 +342,7 @@ test("Connect 4 board helpers drop discs without mutating input and identify leg
 
   assert.equal(context.getDropRowForBoard(board, 0), 5);
   assert.equal(context.getDropRowForBoard(fullColumn, 0), -1);
-  assert.deepEqual(context.getLegalColumns(fullColumn), [1, 2, 3, 4, 5, 6]);
+  assert.deepEqual(plain(context.getLegalColumns(fullColumn)), [1, 2, 3, 4, 5, 6]);
 
   const dropped = context.dropInColumn(board, 0, 2);
   assert.equal(dropped.row, 5);
@@ -353,7 +357,7 @@ test("Connect 4 detects horizontal, vertical, and diagonal wins with winning cel
   const horizontal = emptyConnectBoard();
   horizontal[5][0] = horizontal[5][1] = horizontal[5][2] = horizontal[5][3] = 1;
   assert.equal(context.checkWinFrom(horizontal, 5, 3, 1), true);
-  assert.deepEqual(context.getWinningCells(horizontal, 5, 1, 1), [[5, 0], [5, 1], [5, 2], [5, 3]]);
+  assert.deepEqual(plain(context.getWinningCells(horizontal, 5, 1, 1)), [[5, 0], [5, 1], [5, 2], [5, 3]]);
 
   const vertical = emptyConnectBoard();
   vertical[5][2] = vertical[4][2] = vertical[3][2] = vertical[2][2] = 2;
@@ -362,7 +366,7 @@ test("Connect 4 detects horizontal, vertical, and diagonal wins with winning cel
   const diagonal = emptyConnectBoard();
   diagonal[5][0] = diagonal[4][1] = diagonal[3][2] = diagonal[2][3] = 1;
   assert.equal(context.checkWinFrom(diagonal, 3, 2, 1), true);
-  assert.deepEqual(context.getWinningCells(diagonal, 3, 2, 1), [[5, 0], [4, 1], [3, 2], [2, 3]]);
+  assert.deepEqual(plain(context.getWinningCells(diagonal, 3, 2, 1)), [[5, 0], [4, 1], [3, 2], [2, 3]]);
 
   assert.equal(context.getWinningCells(emptyConnectBoard(), 5, 0, 1), null);
 });
