@@ -39,17 +39,17 @@ npx serve .
 
 ```text
 .
-├── index.html          # Game picker landing page
-├── tic-tac-toe.html    # Tic-Tac-Toe landing page
-├── game.html           # Tic-Tac-Toe play screen
-├── game.js             # Tic-Tac-Toe game logic
-├── tic-tac-toe.css     # Tic-Tac-Toe styles
-├── air-hockey.html     # Air Hockey play screen
-├── air-hockey.js       # Air Hockey canvas game loop and AI
-├── air-hockey.css      # Air Hockey styles
-├── connect-4.html      # Connect 4 play screen
-├── connect-4.js        # Connect 4 board logic and computer moves
-└── connect-4.css       # Connect 4 styles
+|-- index.html          # Game picker landing page
+|-- tic-tac-toe.html    # Tic-Tac-Toe landing page
+|-- game.html           # Tic-Tac-Toe play screen
+|-- game.js             # Tic-Tac-Toe game logic
+|-- tic-tac-toe.css     # Tic-Tac-Toe styles
+|-- air-hockey.html     # Air Hockey play screen
+|-- air-hockey.js       # Air Hockey canvas game loop and AI
+|-- air-hockey.css      # Air Hockey styles
+|-- connect-4.html      # Connect 4 play screen
+|-- connect-4.js        # Connect 4 board logic and computer moves
+`-- connect-4.css       # Connect 4 styles
 ```
 
 ## Development notes
