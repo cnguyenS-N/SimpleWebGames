@@ -14,6 +14,10 @@ A small collection of browser-based games built with plain HTML, CSS, and JavaSc
   - 6x7 Connect 4 game against a computer opponent.
   - Drop red discs by choosing a column while the computer plays green discs.
   - Detects horizontal, vertical, and diagonal wins, highlights the winning line, and supports ties and quick restarts.
+- **Memory Match** (`memory-match.html`, `memory-match.js`, `memory-match.css`)
+  - 12-card matching game with 6 pairs of illustrated cards.
+  - Flip two cards at a time, match all pairs, and track the number of moves needed to win.
+  - Supports quick restarts, accessible card labels, and a short flip-back delay for missed matches.
 
 ## Running locally
 
@@ -49,7 +53,10 @@ npx serve .
 |-- air-hockey.css      # Air Hockey styles
 |-- connect-4.html      # Connect 4 play screen
 |-- connect-4.js        # Connect 4 board logic and computer moves
-`-- connect-4.css       # Connect 4 styles
+|-- connect-4.css       # Connect 4 styles
+|-- memory-match.html   # Memory Match play screen
+|-- memory-match.js     # Memory Match deck, matching, and reset logic
+`-- memory-match.css    # Memory Match card flip styles
 ```
 
 ## Development notes
